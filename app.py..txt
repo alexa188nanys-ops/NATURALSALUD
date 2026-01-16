@@ -1,0 +1,176 @@
+Traceback (most recent call last):
+  File "<python-input-0>", line 1, in <module>
+    import streamlit as st
+ModuleNotFoundError: No module named 'streamlit'
+>>>
+>>> # Configuración de la página
+>>> st.set_page_config(page_title="NatuSalud Pro", page_icon="", layout="centered")
+Traceback (most recent call last):
+  File "<python-input-3>", line 1, in <module>
+    st.set_page_config(page_title="NatuSalud Pro", page_icon="", layout="centered")
+    ^^
+NameError: name 'st' is not defined. Did you mean: 'set'?
+>>>
+>>> # --- BASE DE DATOS DE PLANTAS ---
+>>> plantas_info = {
+...     "Manzanilla": {
+...             "foto": "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=500",
+...                     "beneficios": ["Calma el dolor de estómago", "Reduce la ansiedad", "Ayuda a dormir", "Antiinfla\matorio natural"]
+...                         },                                                                                         matorio natural"]                "Eucalipto": {
+...                         },          "foto": "https://images.unsplash.com/photo-1514733670139-4d87a1941d55?w=500",
+...                     "beneficios": ["Calma el dolor de estómago", "Reduce la ansiedad", "Ayuda a dormir", "Antmatorio natural"]                              "foto": "https://images.unsplash.com/photo-1514733670139-4d87a1941d55?w=500",
+...                         },
+...                             "Eucalipto": {          "Cúrcuma": {
+...                                     "foto": "https://images.unsplash.com/photo-1514733670139-4d87a1941d55?w=500",38i...                                             "beneficios": ["Despeja las vías respiratorias", "Alivia la tos", "Prop\...                                                 },                  "beneficios": ["Potente antiinflamatorio", "Mej\...                                                     "Cúrcuma": {r"]                                                iedades antisépticas", "Combate el resfriado"]                   "foto": "https://images.unsplash.com/photo-161548529038\...                                                 },
+...                                                     "Cúrcuma": {                    "foto": "https://images.unsplas2...                                                             "foto": "https://images.unsplash.com/photo-161548529038\...                                                                     "beneficios": ["Potente antiinflamatorio", "Mej\as náuseas", "Combate la gripe", "Acelera el metabolismo", "Calorífico natural"]                                       2-441e4d049cb5?w=500",                                                                               },                 o...                                                                     "beneficios": ["Potente antiinflamatorio", "Mej\...                                                                         },
+...                                                                             "Jengibre": {                   "foto":ora la digestión", " एटऑकसडट (Antioxidante)", "Alivia dolor articular"]                  "foto": "https://images.unsplas\...                                                                         },
+...                                                                             "Jengibre": {o (uso interno moderado)"]h...                                                                                     "foto": "https://images.unsplas\...                                                                                             "beneficios": ["Quita la...                                                                                                     "Sábila (Aloe)"h.com/photo-1599940824399-b87987cb962d?w=500",                                                                   "foto": ...                                                                                             "beneficios": ["Quita l\...                                                                                                                         }                                                                                                                  as náuseas", "Combate la gripe", "Acelera el metabolismo", "Calorífico natural"]
+...                                                                                                     "Sábila (Aloe)":...                                                                                                             "foto": ...                                                                                                                    "b    }
+>>>
+>>> # --- TÍTULO ---
+>>> st.title(" NatuSalud")
+Traceback (most recent call last):
+  File "<python-input-9>", line 1, in <module>
+    st.title(" NatuSalud")
+    ^^
+NameError: name 'st' is not defined. Did you mean: 'set'?
+>>>
+>>> # --- NAVEGACIÓN POR PESTAÑAS ---
+>>> tab1, tab2 = st.tabs([" Buscar por Síntoma", " Diccionario de Plantas"])
+Traceback (most recent call last):
+  File "<python-input-12>", line 1, in <module>
+    tab1, tab2 = st.tabs([" Buscar por Síntoma", " Diccionario de Plantas"])
+                 ^^
+NameError: name 'st' is not defined. Did you mean: 'set'?
+>>>
+>>> # --- PESTAÑA 1: BUSCADOR ---
+>>> with tab1:
+...         st.subheader("¿Qué malestar tienes?")
+...             sintoma = st.selectbox("Selecciona tu síntoma:",
+...                                       ["---", "Dolor de estómago", "Gripe o Tos", "Estrés", "Dolor articular"])
+...
+  File "<python-input-15>", line 3
+    sintoma = st.selectbox("Selecciona tu síntoma:",
+IndentationError: unexpected indent
+>>>     # Lógica simple de recomendación
+>>>     if sintoma == "Dolor de estómago":
+  File "<python-input-17>", line 1
+    if sintoma == "Dolor de estómago":
+IndentationError: unexpected indent
+>>>         st.success("Recomendado: Manzanilla o Hierbabuena")
+  File "<python-input-18>", line 1
+    st.success("Recomendado: Manzanilla o Hierbabuena")
+IndentationError: unexpected indent
+>>>     elif sintoma == "Gripe o Tos":
+  File "<python-input-19>", line 1
+    elif sintoma == "Gripe o Tos":
+IndentationError: unexpected indent
+>>>         st.success("Recomendado: Eucalipto, Jengibre o Propóleo")
+  File "<python-input-20>", line 1
+    st.success("Recomendado: Eucalipto, Jengibre o Propóleo")
+IndentationError: unexpected indent
+>>>     elif sintoma == "Estrés":
+  File "<python-input-21>", line 1
+    elif sintoma == "Estrés":
+IndentationError: unexpected indent
+>>>         st.success("Recomendado: Lavanda o Cedrón")
+  File "<python-input-22>", line 1
+    st.success("Recomendado: Lavanda o Cedrón")
+IndentationError: unexpected indent
+>>>     elif sintoma == "Dolor articular":
+  File "<python-input-23>", line 1
+    elif sintoma == "Dolor articular":
+IndentationError: unexpected indent
+>>>         st.success("Recomendado: Cúrcuma o Romero")
+  File "<python-input-24>", line 1
+    st.success("Recomendado: Cúrcuma o Romero")
+IndentationError: unexpected indent
+>>>
+>>> # --- PESTAÑA 2: DICCIONARIO ---
+>>> with tab2:
+...             st.subheader("Conoce nuestras plantas")
+...                 planta_sel = st.selectbox("Selecciona una planta para ver detalles:", list(plantas_info.keys()))
+...
+  File "<python-input-27>", line 3
+    planta_sel = st.selectbox("Selecciona una planta para ver detalles:", list(plantas_info.keys()))
+IndentationError: unexpected indent
+>>>     if planta_sel:
+  File "<python-input-28>", line 1
+    if planta_sel:
+IndentationError: unexpected indent
+>>>         col1, col2 = st.columns([1, 1])
+  File "<python-input-29>", line 1
+    col1, col2 = st.columns([1, 1])
+IndentationError: unexpected indent
+>>>         with col1:
+  File "<python-input-30>", line 1
+    with col1:
+IndentationError: unexpected indent
+>>>             st.image(plantas_info[planta_sel]["foto"], caption=planta_sel, use_container_width=True)
+  File "<python-input-31>", line 1
+    st.image(plantas_info[planta_sel]["foto"], caption=planta_sel, use_container_width=True)
+IndentationError: unexpected indent
+>>>         with col2:
+  File "<python-input-32>", line 1
+    with col2:
+IndentationError: unexpected indent
+>>>             st.write(f"**Beneficios de la {planta_sel}:**")
+  File "<python-input-33>", line 1
+    st.write(f"**Beneficios de la {planta_sel}:**")
+IndentationError: unexpected indent
+>>>             for beneficio in plantas_info[planta_sel]["beneficios"]:
+  File "<python-input-34>", line 1
+    for beneficio in plantas_info[planta_sel]["beneficios"]:
+IndentationError: unexpected indent
+>>>                 st.write(f" {beneficio}")
+  File "<python-input-35>", line 1
+    st.write(f" {beneficio}")
+IndentationError: unexpected indent
+>>>
+>>> # --- PIE DE PÁGINA (TU NOTA DE SEGURIDAD) ---
+>>> st.divider()
+Traceback (most recent call last):
+  File "<python-input-38>", line 1, in <module>
+    st.divider()
+    ^^
+NameError: name 'st' is not defined. Did you mean: 'set'?
+>>> st.warning("""
+... **Nota importante:** Esta página se centra en controlar la enfermedad o aliviar momentáneamente el dolor.
+... Sin embargo, **no excede ni reemplaza** los medicamentos médicos dictados por un doctor.
+... Se aconseja encarecidamente acudir con un médico profesional para un diagnóstico adecuado.
+... """)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
